@@ -1,7 +1,7 @@
-
 import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject, combineLatest, Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { ApiService } from '../api.service';
 import { Produit } from '../models/produit';
 
@@ -13,11 +13,39 @@ import { Produit } from '../models/produit';
   styleUrls: ['./liste.component.css']
 })
 export class ListeComponent implements OnInit {
+
+  private searchTerm$ = new BehaviorSubject<string>('');
   produits$: Observable<Produit[]>;
+  messageAucunProduit = ''; 
 
   constructor(private apiService: ApiService) {}
 
-  ngOnInit() {
-    this.produits$ = this.apiService.getProduits();
+  ngOnInit(): void {
+    this.produits$ = combineLatest([
+      this.apiService.getProduits(),
+      this.searchTerm$
+    ]).pipe(
+      map(([produits, searchTerm]) => {
+        const filteredProduits = produits.filter(produit =>
+          produit.nom.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          produit.reference.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          (produit.prix <= parseFloat(searchTerm) && !isNaN(parseFloat(searchTerm)))
+        );
+
+        
+        this.messageAucunProduit = filteredProduits.length === 0 ? 'Aucun produit trouvé' : '';
+        
+        return filteredProduits;
+      })
+    );
+  }
+
+  onCriteresRecherche(searchTerm: string): void {
+    this.searchTerm$.next(searchTerm);
+  }
+
+  onSearchInput(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    this.onCriteresRecherche(input.value);
   }
 }

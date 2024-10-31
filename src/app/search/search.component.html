@@ -1,0 +1,15 @@
+<div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Rechercher un produit (nom, référence, prix max)"
+      [(ngModel)]="searchTerm"
+      (input)="rechercher()"
+    />
+    
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="button" (click)="rechercher()">Rechercher</button>
+    </div>
+  </div>
+  
+  

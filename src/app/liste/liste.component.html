@@ -1,8 +1,32 @@
-<h2>
-    liste de produits!
-</h2>
-    
-    <p *ngFor="let item of produits$ | async">
-        {{ item.id }} - {{ item.nom }}- {{ item.reference }}- {{ item.prix }}
-     </p> 
-    
+<div class="container">
+    <header class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="text-center mx-auto">Boutique Informatique</h1>
+        <div style="max-width: 200px;">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Rechercher..."
+            (input)="onSearchInput($event)"
+          />
+        </div>
+      </header>
+  
+    <h2 class="mb-3 text-center">Liste de produits</h2>
+  
+    <p *ngIf="messageAucunProduit" class="alert alert-warning text-center">{{ messageAucunProduit }}</p>
+  
+    <div class="row">
+      <div class="col-md-4" *ngFor="let item of produits$ | async">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.nom }}</h5>
+            <p class="card-text">
+              <strong>Référence :</strong> {{ item.reference }}<br />
+              <strong>Prix :</strong> {{ item.prix | currency: 'EUR' }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

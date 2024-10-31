@@ -1,33 +1,122 @@
 [
-    {
-      "id": 1,
-      "nom": "Ordinateur Portable",
-      "reference": "OP-12345",
-      "prix": 799.99
-    },
-    {
-      "id": 2,
-      "nom": "Casque Audio",
-      "reference": "CA-54321",
-      "prix": 149.99
-    },
-    {
-      "id": 3,
-      "nom": "Souris Gaming",
-      "reference": "SG-98765",
-      "prix": 49.99
-    },
-    {
-      "id": 4,
-      "nom": "Clavier Mécanique",
-      "reference": "CM-45678",
-      "prix": 89.99
-    },
-    {
-      "id": 5,
-      "nom": "Écran 4K",
-      "reference": "E4K-87654",
-      "prix": 399.99
-    }
-  ]
-  
+  {
+    "id": 1,
+    "nom": "Ordinateur Portable",
+    "reference": "OP-12345",
+    "prix": 799.99
+  },
+  {
+    "id": 2,
+    "nom": "Casque Audio",
+    "reference": "CA-54321",
+    "prix": 149.99
+  },
+  {
+    "id": 3,
+    "nom": "Souris Gaming",
+    "reference": "SG-98765",
+    "prix": 49.99
+  },
+  {
+    "id": 4,
+    "nom": "Clavier Mécanique",
+    "reference": "CM-45678",
+    "prix": 89.99
+  },
+  {
+    "id": 5,
+    "nom": "Écran 4K",
+    "reference": "E4K-87654",
+    "prix": 399.99
+  },
+  {
+    "id": 6,
+    "nom": "Disque Dur Externe",
+    "reference": "DD-54321",
+    "prix": 129.99
+  },
+  {
+    "id": 7,
+    "nom": "SSD 1 To",
+    "reference": "SSD-67890",
+    "prix": 199.99
+  },
+  {
+    "id": 8,
+    "nom": "Carte Mère",
+    "reference": "CM-87654",
+    "prix": 149.99
+  },
+  {
+    "id": 9,
+    "nom": "Carte Graphique",
+    "reference": "CG-54389",
+    "prix": 499.99
+  },
+  {
+    "id": 10,
+    "nom": "Barrette Mémoire 16 Go",
+    "reference": "RAM-45687",
+    "prix": 89.99
+  },
+  {
+    "id": 11,
+    "nom": "Alimentation 650W",
+    "reference": "PSU-98765",
+    "prix": 79.99
+  },
+  {
+    "id": 12,
+    "nom": "Boîtier PC",
+    "reference": "BP-12398",
+    "prix": 69.99
+  },
+  {
+    "id": 13,
+    "nom": "Tablette Graphique",
+    "reference": "TG-24680",
+    "prix": 299.99
+  },
+  {
+    "id": 14,
+    "nom": "Webcam HD",
+    "reference": "WC-45679",
+    "prix": 59.99
+  },
+  {
+    "id": 15,
+    "nom": "Clé USB 128 Go",
+    "reference": "USB-65432",
+    "prix": 29.99
+  },
+  {
+    "id": 16,
+    "nom": "Imprimante Laser",
+    "reference": "IMP-12356",
+    "prix": 199.99
+  },
+  {
+    "id": 17,
+    "nom": "Routeur Wi-Fi",
+    "reference": "RT-65498",
+    "prix": 89.99
+  },
+  {
+    "id": 18,
+    "nom": "Scanner Document",
+    "reference": "SC-34218",
+    "prix": 149.99
+  },
+  {
+    "id": 19,
+    "nom": "Écran UltraWide 34\"",
+    "reference": "EUV-76543",
+    "prix": 699.99
+  },
+  {
+    "id": 20,
+    "nom": "Microphone USB",
+    "reference": "MIC-90784",
+    "prix": 129.99
+  }
+]
