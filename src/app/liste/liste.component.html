@@ -1,0 +1,8 @@
+<h2>
+    liste de produits!
+</h2>
+    
+    <p *ngFor="let item of produits$ | async">
+        {{ item.id }} - {{ item.nom }}- {{ item.reference }}- {{ item.prix }}
+     </p> 
+    

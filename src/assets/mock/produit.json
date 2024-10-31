@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "nom": "Ordinateur Portable",
+      "reference": "OP-12345",
+      "prix": 799.99
+    },
+    {
+      "id": 2,
+      "nom": "Casque Audio",
+      "reference": "CA-54321",
+      "prix": 149.99
+    },
+    {
+      "id": 3,
+      "nom": "Souris Gaming",
+      "reference": "SG-98765",
+      "prix": 49.99
+    },
+    {
+      "id": 4,
+      "nom": "Clavier Mécanique",
+      "reference": "CM-45678",
+      "prix": 89.99
+    },
+    {
+      "id": 5,
+      "nom": "Écran 4K",
+      "reference": "E4K-87654",
+      "prix": 399.99
+    }
+  ]
+  
